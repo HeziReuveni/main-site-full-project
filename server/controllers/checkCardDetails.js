@@ -13,10 +13,10 @@ const checkCardDetails = (req, res) => {
       }
     }
   }
-  console.log(
+ return(
     price
-      ? "Send details to server! And a ticket is charged for NIS 757"
-      : "Send details to server! And a ticket is charged for NIS 687"
+      ? res.status(200).send("Send details to server! And a ticket is charged for NIS 757")
+      : res.status(200).send("Send details to server! And a ticket is charged for NIS 687")
   );
 };
 
